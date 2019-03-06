@@ -73,7 +73,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (15,'Blue Bag','Super awesome bag',36.3,'2018-09-06 08:47:36','draft',5,'/uploads/ADqBNb8Gymrv3R9OS.jpg','Bag'),(16,'Blue Bag','Super awesome bag',23.99,'2018-09-06 08:47:39','draft',5,'/uploads/ylHVSOchepCr5PF6B.jpg','Bag'),(17,'Blue Bag','Super awesome bag',45.3,'2018-09-06 08:48:40','draft',5,'/uploads/0H2wY1lys6jPb93hi.jpg','Bag'),(18,'Nike Flex','Awesome shoes',69.99,'2018-09-06 08:49:32','draft',5,'/uploads/QKTExDXuAGkj429md.jpeg','Shoes'),(19,'Basket Ball Shoes','Pair of NIKE basketball shoes',120,'2018-09-06 09:58:49','draft',5,'/uploads/y9L2lvNdfuGWseTxA.jpg','Shoes'),(20,'Bagpipes','Musical Instrument',34.99,'2018-09-06 10:02:03','draft',5,'/uploads/9Qkutrbwesa57p8VT.jpg','Music Instrument'),(24,'test','<script>alert(\"you are hacked\")</script>',10,'2019-03-06 10:36:57','draft',5,'/uploads/p3tCLGsg6lEYdHB2v.jpg','test');
+INSERT INTO `products` VALUES (15,'Blue Bag','Super awesome bag',36.3,'2018-09-06 08:47:36','draft',5,'/uploads/ADqBNb8Gymrv3R9OS.jpg','Bag'),(16,'Blue Bag','Super awesome bag',23.99,'2018-09-06 08:47:39','draft',5,'/uploads/ylHVSOchepCr5PF6B.jpg','Bag'),(17,'Blue Bag','Super awesome bag',45.3,'2018-09-06 08:48:40','draft',5,'/uploads/0H2wY1lys6jPb93hi.jpg','Bag'),(18,'Nike Flex','Awesome shoes',69.99,'2018-09-06 08:49:32','draft',5,'/uploads/QKTExDXuAGkj429md.jpeg','Shoes'),(19,'Basket Ball Shoes','Pair of NIKE basketball shoes',120,'2018-09-06 09:58:49','draft',5,'/uploads/y9L2lvNdfuGWseTxA.jpg','Shoes'),(20,'Bagpipes','Musical Instrument',34.99,'2018-09-06 10:02:03','draft',5,'/uploads/9Qkutrbwesa57p8VT.jpg','Music Instrument');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,4 +112,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-06 19:58:59
+-- Dump completed on 2019-03-06 20:01:50
