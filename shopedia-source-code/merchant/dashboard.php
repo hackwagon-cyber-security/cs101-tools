@@ -91,16 +91,6 @@ $count = mysqli_num_rows($result);
               </div>
             </div>
           </div>
-
-          <!-- <div class="ui form">
-            <div class="field">
-              <input type="text" name="first-name" placeholder="First name">
-            </div>
-            <div class="field">
-              <textarea placeholder="Some example text..."></textarea>
-            </div>
-          </div> -->
-
         </div>
       </div>
 

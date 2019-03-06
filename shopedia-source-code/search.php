@@ -1,5 +1,5 @@
 <?php
-  include('./tools/debug.php');
+  include('./dev/debug.php');
   include('./auth/session.php');
   include("./auth/config.php");
 ?>

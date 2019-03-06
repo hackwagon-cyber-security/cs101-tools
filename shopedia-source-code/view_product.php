@@ -18,7 +18,6 @@ while ($product_row = $product_result->fetch_assoc()) {
 }
 
 $product_row = $all_products[0];
-debug_to_console($all_products[0]);
 
 $category = $product_row["productCategory"];
 $related_product_sql = "SELECT * FROM products WHERE productCategory LIKE '%$category%';";
@@ -69,7 +68,7 @@ $related_products = array_slice($related_products, 0, 5, true);
         $.ajax({
           url: `/cart.php?id=${params.get('id')}&qty=${$("#qty").val()}`
         }).done(function(data){
-          console.log(data);
+          // console.log(data);
           if (data) {
             let response = JSON.parse(data);
             if (response.status == "success") {
@@ -84,8 +83,8 @@ $related_products = array_slice($related_products, 0, 5, true);
               `);
               $(".ui.small.success.message").transition("fade");
               var count = $($(".cart-count")[0]).text();
-              console.log(Number.parseInt(count));
-              console.log(Number.parseInt($("#qty").val()));
+              // console.log(Number.parseInt(count));
+              // console.log(Number.parseInt($("#qty").val()));
               $(".cart-count").text(Number.parseInt(count) + Number.parseInt($("#qty").val()));
             } else {
               $(".ui.small.negative.message").remove();
@@ -104,12 +103,6 @@ $related_products = array_slice($related_products, 0, 5, true);
       })
 
     });
-
-    
-    
-      // setTimeout(() => {
-      //   $("#carousel").transition("fade");
-      // }, 2000)
       
   </script>
 </head>
@@ -186,12 +179,9 @@ $related_products = array_slice($related_products, 0, 5, true);
                   <div><b>Product details for <?php echo $product_row["productName"]; ?></b></div>
                 </div>
                 <div class="ui grid" style="margin: 0">
-                  <!-- <div class="five wide column">
-                    <img style="width: 100%; object-fit: cover;" src="<?php echo $product_row["imgPath"]; ?>">
-                  </div> -->
 
                   <div class="sixteen wide column">
-                    <?php echo $product_row["productName"]; ?>
+                    <?php echo $product_row["productDesc"]; ?>
                   </div>
 
                 </div>

@@ -1,5 +1,5 @@
 <?php
-include "../tools/debug.php";
+include "../dev/debug.php";
 include "../auth/config.php";
 include '../auth/session.php';
 
@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     debug_to_console("Sorry, your file is too large.");
     $uploadOk = 0;
   }
+
   // Allow certain file formats
   if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
@@ -56,20 +57,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $status = "draft";
         $belongsTo = $userId;
         $imgPath = str_replace("..", "", $target_file);
-       // debug_to_console($imgPath);
 
         $insert_stmt = "INSERT INTO products (productName,productDesc,productCategory,cost,status,belongsTo,imgPath) VALUES ('$productName', '$productDesc', '$productCategory', '$cost', '$status', '$belongsTo', '$imgPath')";
         $insert_success = mysqli_query($db, $insert_stmt);
 
         if (!$insert_success) {
           $error = "Could not insert product";
-          return;
+          echo 'Error';
         } else {
           $success_message = "Successfully created product";
           echo '<script>window.location=""</script>';
         }
         $_POST = array();
     } else {
+        echo "Error uploading your image.";
         $error = "Sorry, there was an error uploading your image.";
     }
   }
@@ -199,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <td>' . date('jS M Y, h:i a', strtotime($product_row["createdAt"])) . '</td>
                     <td>$' . $product_row["cost"] . '</td>
                     <td>' . $product_row["status"] . '</td>
-                    <td><a href="/merchant/view_product.php?id='. $product_row["id"] .'">View</a></td>
+                    <td><a href="/view_product.php?id='. $product_row["id"] .'">View</a></td>
                   </tr>';
                 }
               ?>
@@ -236,9 +237,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Create A Product
       </div>
       <div class="content">
-        <!-- <div class="ui medium image">
-          <img src="/images/avatar/large/chris.jpg">
-        </div> -->
         <form action="" id="create-product-form" class="ui form" method="post" enctype="multipart/form-data">
 
 
@@ -278,9 +276,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </button>
           </div>
         </form>
-
-        <!-- <div class="description">
-        </div> -->
       </div>
 
     </div>
@@ -305,13 +300,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $("#productImage").css("border-color", "#E0B4B4");
           $("#productImage").css("background", "#FFF6F6");
         }
-
-        // if( $('#create-product-form').form('is valid')) {
-        //   // form is valid (both email and name)
-        //   document.getElementById("create-product-form").submit();
-        // }
-
-
       }
     </script>
   </footer>
