@@ -10,3 +10,4 @@ mysql -uroot -p'password' <<EOF
 use shopedia;
 alter table products modify column id int auto_increment;
 EOF
+exit
