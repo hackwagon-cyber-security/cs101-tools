@@ -6,16 +6,19 @@
             die("Connection failed: " . $mysqli->connect_error);
         } 
         $sql = "select value from data_store where id = " . $_GET['id'];
-        if ($mysqli->query($sql) === TRUE) {
-        
-        }
 
-        $result = $mysqli->query($sql);
+        $stmt = $mysqli->prepare("select value from data_store where id = (?)");
+        $stmt->bind_param("i",$_GET['id']);
+        $stmt->execute();
 
-        if($result->num_rows> 0) {
-            // output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo $row['value'];
+        if ($stmt->execute()) {
+            $result = $mysqli->query($sql);
+
+            /* bind result variables */
+            $stmt->bind_result($value);
+
+            while ($stmt->fetch()) {
+                echo $value;
             }
         }
         // Close connection
