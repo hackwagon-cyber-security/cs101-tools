@@ -8,10 +8,6 @@ if(!isset($_SESSION)){
 date_default_timezone_set('Asia/Singapore');
 
 if (!isset($_SESSION['login_user'])) {
-    // echo 
-    //     '<script type="text/javascript">
-    //       window.location = "/auth/login.php"
-    //     </script>';
     header("Location:../auth/login.php");
     exit();
 } else {

@@ -25,14 +25,6 @@ if(isset($_SESSION["cart"])) {
   }
 }
 
-
-
-// $product_row = $all_products[0];
-// debug_to_console($all_products[0]);
-// $search_product_sql = "SELECT * FROM products WHERE productName LIKE '%$q%';";
-// $result = mysqli_query($db, $sql);
-// $product_row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -143,12 +135,6 @@ if(isset($_SESSION["cart"])) {
       });
 
     })
-
-    
-    
-      // setTimeout(() => {
-      //   $("#carousel").transition("fade");
-      // }, 2000)
       
   </script>
 </head>

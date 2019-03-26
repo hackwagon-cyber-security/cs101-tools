@@ -1,8 +1,4 @@
 <?php
-  // ini_set('display_startup_errors',1);
-  // ini_set('display_errors',1);
-  // error_reporting(-1);
-
   $user = 'root';
   $password = 'password';
   $db = 'shopedia';
@@ -40,18 +36,12 @@
         } else {
             $errorMessage .= $i . " | " . $errorFileContent[$i] . " <br>";
         }
-        
-        // setcookie("error-message", $errorMessage);
       }
-      // echo $errorMessage;
       header("Location: ../dev/error.php?msg=" . urlencode(base64_encode($errorMessage)));
       exit($errno);
     }
   
     set_error_handler('customErrorHandler');
-  
-    // error_reporting(-1);
-    // ini_set('display_errors', 1);
  }
 
   
