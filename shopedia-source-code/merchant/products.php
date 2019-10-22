@@ -160,11 +160,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="ui icon user">
             <a class="ui item">
               <i class="user link icon"></i>
-              Username
+              <?php echo $email ?>
             <a>
             </div>
           </div>
-          <a class="ui item">
+          <a class="ui item" href="../auth/logout.php">
             Logout
           </a>
         </div>
