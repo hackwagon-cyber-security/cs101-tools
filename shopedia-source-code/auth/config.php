@@ -1,6 +1,6 @@
 <?php
   $user = 'root';
-  $password = 'password';
+  $password = '';
   $db = 'shopedia';
   $host = 'localhost';
   $port = 3306;
