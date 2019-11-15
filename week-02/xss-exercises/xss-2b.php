@@ -1,7 +1,13 @@
+
 <?php
+	$value = "Maybe you can think of closing the tag!";
 	if (isset($_REQUEST['name'])) {
-		echo "Your name is: " . $_REQUEST['name'];
-	} else {
-		echo "Maybe you try hacking this demo page by telling me your name in the HTTP parameter!";
+		$value = $_REQUEST['name'];
 	}
+
+	echo '<input type="text" size="35" name="fname" value="' . $value . '">';
+	echo '<br>';
+	echo 'Similar to the previous exercise! Use the "name" URL parameter!';
 ?>
+
+
