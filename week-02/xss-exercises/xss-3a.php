@@ -1,6 +1,5 @@
 <?php
 	header("Content-Security-Policy: default-src 'none';");
-	echo '<script>alert()</script>'; 
 	if (isset($_REQUEST['name'])) {
 		echo "Your name is: " . $_REQUEST['name'];
 	} else {
