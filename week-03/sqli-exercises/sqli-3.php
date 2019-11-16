@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli("localhost", "root", "password", "sqldemo");
+    $mysqli = new mysqli("localhost", "demo", "password", "sqldemo");
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);
     }
