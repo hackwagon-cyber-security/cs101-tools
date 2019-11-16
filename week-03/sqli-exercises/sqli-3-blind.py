@@ -4,7 +4,7 @@ import requests
 characters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 username = "simple_user_1"
 password = ""
-site = "http://supersecurity.cf/exercises/sqli-3.php?username="
+site = "http://supersecurity.cf/demo/sqli-3.php?username="
 password_length = -1
 
 # Guess the password length
