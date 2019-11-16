@@ -31,4 +31,17 @@ insert into product (product_name, category) values ('broccoli','vegetables');
 insert into product (product_name, category) values ('coke','drinks');
 insert into product (product_name, category) values ('100 plus','drinks');
 
+CREATE TABLE simple_users (
+	`id` int NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(128) NOT NULL,
+	`password` VARCHAR(128) NOT NULL,
+	PRIMARY KEY (`id`)
+);
+
+insert into simple_users (username, password) values ('simple_user_1','12345');
+insert into simple_users (username, password) values ('simple_user_2','abcdef');
+insert into simple_users (username, password) values ('simple_user_3','password');
+insert into simple_users (username, password) values ('simple_user_4','hello');
+insert into simple_users (username, password) values ('simple_user_5','handsome');
+
 ```
