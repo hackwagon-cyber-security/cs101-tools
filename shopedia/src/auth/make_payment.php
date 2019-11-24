@@ -21,7 +21,7 @@ if (!$userId || !$creditCardNumber || !$cvvNumber || !$expiryDate || !$fullName 
 $user = 'root';
 $password = 'root';
 $db = 'shopedia';
-$host = 'localhost';
+$host = getenv('ENV_VAR') == 'docker' ? 'db' : 'localhost';
 $port = 3306;
 
 $db = mysqli_connect($host,$user,$password,$db,$port);

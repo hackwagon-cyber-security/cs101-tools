@@ -1,0 +1,32 @@
+version: '3'
+services:
+  webapp:
+    build:
+      context: ./
+      dockerfile: ./bin/webapp/Dockerfile
+    container_name: 'shopedia-webapp'
+    environment:
+      - ENV_VAR=docker
+    ports:
+      - '8080:80'
+    networks:
+      - webapp-db-net
+    restart: always
+  db:
+    build:
+      context: ./
+      dockerfile: ./bin/db/Dockerfile
+    container_name: 'shopedia-mysql-db'
+    ports:
+      - '33060:3306'
+    environment:
+      - MYSQL_DATABASE=shopedia
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+    networks:
+      - webapp-db-net
+    restart: always
+
+networks:
+    webapp-db-net:
