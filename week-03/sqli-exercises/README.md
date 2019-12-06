@@ -1,6 +1,7 @@
 
-``` sql
+# Setting up the databases for the SQL Injection Exercises
 
+``` sql
 create database sqldemo;
 use database sqldemo;
 
@@ -43,5 +44,4 @@ insert into simple_users (username, password) values ('simple_user_2','abcdef');
 insert into simple_users (username, password) values ('simple_user_3','password');
 insert into simple_users (username, password) values ('simple_user_4','hello');
 insert into simple_users (username, password) values ('simple_user_5','handsome');
-
 ```

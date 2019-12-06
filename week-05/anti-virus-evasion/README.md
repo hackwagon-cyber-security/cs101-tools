@@ -1,9 +1,8 @@
 # AV Evasion
+This is a very simple demonstration of how a Jar file can be used to create socket connection back to the attacker.
+Java must be installed.
 
 ``` bash
-pyinstaller --one-file .\reverse_shell.py
-
-# The output file will be "reverse_shell.exe". Feel free to modify the name.
+javac ReverseShell.java
+jar cvfe ReverseShell.jar ReverseShell ReverseShell.class
 ```
-
-Right click and scan the executable with Windows Defender. The scan will not trigger any warning.
